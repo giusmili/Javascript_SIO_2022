@@ -1,0 +1,44 @@
+/* theme css main */
+
+header > h1, footer p{
+    text-align: center;
+    line-height: 6.5rem;
+    color: #222;
+}
+main{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+:root{
+    --colors-primary: #2b2a33;
+    --colors-secondary: #42414d;
+    --colors-text-primary: #fff;
+    --color-text-title: #2980b9;
+}
+body{
+    background-color: var(--colors-primary);
+    color: var(--colors-text-primary);
+}
+header h1, footer p{
+    color: var(--colors-text-primary);
+}
+section h2, 
+:is(p){
+    color: var(--colors-text-primary);
+    
+}
+section h2{
+    background-color: var(--colors-primary);
+    padding: 1rem;
+    border-radius: .8rem;
+    color: var(--color-text-title);
+}
+section{
+    background: var(--colors-secondary);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .8rem;
+}
+footer p{
+    color: var(--color-text-title);
+}
