@@ -1,3 +1,5 @@
+
+
 /* theme css main */
 
 header > h1, footer p{
@@ -14,6 +16,9 @@ main{
     --colors-secondary: #42414d;
     --colors-text-primary: #fff;
     --color-text-title: #2980b9;
+}
+.btn-primary{
+
 }
 body{
     background-color: var(--colors-primary);
@@ -39,6 +44,26 @@ section{
     margin-bottom: 1rem;
     border-radius: .8rem;
 }
+section .list{
+    color: #fff;
+    list-style: none;
+}
+section .list img{
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+section .list li:last-child{
+    width: 5rem;
+}
+.picture-description{
+    padding: 2rem;
+    background-color: var(--colors-primary);
+    border-radius: .8rem;
+}
+
 footer p{
     color: var(--color-text-title);
 }

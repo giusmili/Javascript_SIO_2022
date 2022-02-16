@@ -5,8 +5,13 @@ window.addEventListener("load", e => {
         console.log(`Bonjour`);
     };
     //fonction nommée
-
+    let content = document.querySelector("section ul");
+    let el = document.getElementsByTagName("section")[1];
+    el.childNodes[1].innerHTML += ` &amp; Css`;
     let x = 0; //variable globale
+
+    /* el.childNodes[1].innerText += ` &amp; css` */
+    //  console.log(el)
 
     (() => {
         //fonction anonyme
@@ -48,4 +53,40 @@ window.addEventListener("load", e => {
     console.log(`${auteurs_more.nom}\n ${auteurs_more.prenom}\n ${auteurs_more.age}`);
 
     console.log(typeof Auteur);
+
+    console.log(content);
+
+    //objet animal
+
+    const animal = [{
+        name: "Meow",
+        species: "Cat",
+        favFood: ['tuna', 'catnip', "celery"],
+        birthYear: 2012,
+        photo: "https://loremflickr.com/320/240?lock=1"
+    }];
+    console.table(animal);
+    /**
+     * 
+     * @param {String} birthYear 
+     */
+    //function of calculator
+    const age = birthYear => {
+        let calcAge = new Date().getFullYear() - birthYear;
+        if (calcAge == 1) {
+            return `1 year old`;
+        } else if (calcAge == 0) {
+            return 'Hello Baby';
+        } else {
+            return `${calcAge}`;
+        }
+    };
+    let print_Out = age(12); //template
+    content.innerHTML += `
+                        <li> 
+                            ${animal[0].name} Birth in ${print_Out}
+                         </li>
+                        <li>Photo</li>
+                        `;
+    el.innerHTML += `<img src="${animal[0].photo}" alt="photo" class="picture-description">`;
 });
