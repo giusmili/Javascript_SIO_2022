@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", e => {
     let el = document.createElement("ul");
     let parent = document.querySelector("section:nth-of-type(2)");
     let last_el = document.getElementsByTagName("section")[1];
+    let main_title = document.querySelector("h1");
     //console.log(parent.children[0].textContent)
     parent.appendChild(el);
     el.setAttribute("class", "list"); //méthode pour ajouter des attributs et des valeurs
@@ -32,12 +33,6 @@ document.addEventListener("DOMContentLoaded", e => {
         image: "./asset/c_original_logo_icon_146611.png"
     };
 
-    for (let i in language) {
-        /* itérer l'objet */
-        let value = language[i];
-        console.log(`${i} : ${value}`);
-    }
-
     console.table(`Implémentation : ${language.implementations.join(' - ')}`);
     //template
     const list_lang = `<li>Nom : ${language.nom}</li>
@@ -54,4 +49,14 @@ document.addEventListener("DOMContentLoaded", e => {
                  `;
     //injecter le modèle
     el.innerHTML = list_lang;
+
+    // other iteration
+    for (let i in language) {
+        /* itérer l'objet */
+        let value = language[i];
+        console.log(`${i} : ${value}`);
+    }
+    console.log(main_title.getAttribute("data-desc"));
+    let contents = main_title.getAttribute("data-desc");
+    main_title.innerText += ` et ${contents}`;
 });

@@ -10,16 +10,17 @@ header > h1, footer p{
 main{
     max-width: 120rem;
     margin: 0 auto;
+    
+   
 }
+
 :root{
     --colors-primary: #2b2a33;
     --colors-secondary: #42414d;
     --colors-text-primary: #fff;
     --color-text-title: #2980b9;
 }
-.btn-primary{
 
-}
 body{
     background-color: var(--colors-primary);
     color: var(--colors-text-primary);
@@ -28,7 +29,7 @@ header h1, footer p{
     color: var(--colors-text-primary);
 }
 section h2, 
-:is(p){
+:is(p){ /* à la place de : section p */
     color: var(--colors-text-primary);
     
 }
@@ -43,6 +44,10 @@ section{
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: .8rem;
+}
+section p code{
+    background-color: inherit;
+    font-size: inherit;
 }
 section .list{
     color: #fff;
@@ -63,6 +68,7 @@ section .list li:last-child{
     background-color: var(--colors-primary);
     border-radius: .8rem;
 }
+
 
 footer p{
     color: var(--color-text-title);

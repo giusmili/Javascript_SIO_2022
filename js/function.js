@@ -81,7 +81,7 @@ window.addEventListener("load", e => {
             return `${calcAge}`;
         }
     };
-    let print_Out = age(12); //template
+    let print_Out = age(14); //template
     content.innerHTML += `
                         <li> 
                             ${animal[0].name} Birth in ${print_Out}
@@ -89,4 +89,19 @@ window.addEventListener("load", e => {
                         <li>Photo</li>
                         `;
     el.innerHTML += `<img src="${animal[0].photo}" alt="photo" class="picture-description">`;
+
+    /* exercice js */
+    const person = [45, "Brad", 180];
+    console.table(person);
+
+    // destructuring
+    /**
+     * 
+     * @param {any} param0 
+     * @returns 
+     */
+    const response = ([age, last_name, height]) => ({ age, last_name, height }); // renvoie un tableau
+
+    const result = response(person);
+    console.table(result);
 });
