@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", e => {
     
     */
     last_el.childNodes[1].innerText = "Spécification du langage C";
+
     const language = {
         nom: "C",
         concept: "Dennis Ritchie",

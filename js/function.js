@@ -1,4 +1,5 @@
 window.addEventListener("load", e => {
+    /* objet + méthode */
     console.log(e.target);
     //const message = prompt("Votre nom?")
     const msg = () => {

@@ -49,6 +49,13 @@ section p code{
     background-color: inherit;
     font-size: inherit;
 }
+section ul{
+    list-style: none;
+    
+}
+section ul li{
+    color: #fff;
+}
 section .list{
     color: #fff;
     list-style: none;
